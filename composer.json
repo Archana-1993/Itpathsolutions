@@ -19,8 +19,8 @@
         "spatie/laravel-permission": "^5.0|^6.0"
     },
     "extra": {
-        "laravel":{
-            "providers":[
+        "laravel": {
+            "providers": [
                 "Itpathsolutions\\Sessionmanager\\SessionManagerServiceProvider"
             ]
         }
@@ -28,7 +28,7 @@
     "scripts": {
         "post-install-cmd": [
             "@php -r \"if (class_exists('Spatie\\\\Permission\\\\PermissionServiceProvider')) { echo 'Spatie already installed. Skipping vendor publish.'; } else { system('php artisan vendor:publish --provider=\\\"Spatie\\\\Permission\\\\PermissionServiceProvider\\\" --tag=config'); system('php artisan vendor:publish --provider=\\\"Spatie\\\\LaravelPermission\\\\PermissionServiceProvider\\\" --tag=migrations'); }\"",
-            "@php artisan vendor:publish --provider=\"Itpathsolutions\\Sessionmanager\\SessionManagerServiceProvider\" --tag=config",
+            "@php artisan vendor:publish --provider=\"Itpathsolutions\\Sessionmanager\\SessionManagerServiceProvider\" --tag=config"
         ]
     },
     "version": "1.0.1"
